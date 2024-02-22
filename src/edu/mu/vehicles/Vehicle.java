@@ -71,6 +71,27 @@ public abstract class Vehicle {
 	public void setColor(VehicleColor color) {
 		this.color = color;
 	}
+	
+	public double getFuelPrice(FuelType fuelType) {
+		double fuelPrice = 0;
+		switch(fuelType) {
+			case DIESEL:
+				fuelPrice = 4.68;
+				return fuelPrice;
+			case ELECTRIC:
+				fuelPrice = 1.38;
+				return fuelPrice;
+			case GASOLINE:
+				fuelPrice = 2.89;
+				return fuelPrice;
+			case HYBRID:
+				fuelPrice = 2.10;
+				return fuelPrice;
+			default:
+				break;
+		}
+		return fuelPrice;
+	}
 
 	public FuelType getFuelType() {
 		return fuelType;
