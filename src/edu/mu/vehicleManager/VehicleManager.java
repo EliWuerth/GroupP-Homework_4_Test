@@ -117,10 +117,69 @@ public class VehicleManager {
         }
     }
 
+    public void displayVehicleInformation(Vehicle v) {
+        if(vehicleList.contains(v)){
+			System.out.println(v + " MaintenanceCost: " + v.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + v.calculateFuelEfficiency(5000, v.getFuelPrice(v.getFuelType())));
+		}else {
+			System.out.println("\n*** Vehicle Not Found: ***");
+		}
+    }
+
     public void displayAllVehicleInformation() {
         // Implement displaying the information of all vehicles
     	for (Vehicle vehicle : vehicleList) {
     		System.out.println(vehicle + ", MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
     	}
+    }
+
+    public boolean removeVehicle(Vehicle vehicle) {
+		return false;
+        // Implement removing the given vehicle from vehicleList
+    }
+
+    public boolean addVehicle(Vehicle vehicle) {
+		return false;
+        // Implement adding the given vehicle to vehicleList
+    }
+
+    public boolean saveVehicleList() {
+		return false;
+        // Implement saving the vehicleList back to the CSV file
+    }
+
+    private boolean isVehicleType(Vehicle v, Class clazz) {
+		return false;
+        // Implement checking if the given vehicle is a specific type of Vehicle subclass
+    }
+
+    public int getNumberOfVehichlesByType(Class clazz) {
+		return 0;
+    	// Implement returning the number of objects in the vehicleList based on the object vehicle type
+    }
+
+    public Vehicle getVehicleWithHighestMaintenanceCost(double distance) {
+		return null;
+
+    	// Implement returning the vehicle with the highest maintenance cost
+    }
+
+    public Vehicle getVehicleWithLowestMaintenanceCost(double distance) {
+		return null;
+        // Implement returning the vehicle with the lowest maintenance cost
+    }
+
+    public ArrayList<Vehicle> getVehicleWithHighestFuelEfficiency(double distance, double fuelPrice) {
+		return null;
+        // Implement returning the vehicles with the highest fuel efficiency
+    }
+
+    public ArrayList<Vehicle> getVehicleWithLowestFuelEfficiency(double distance, double fuelPrice) {
+		return null;
+        // Implement returning the vehicles with the lowest fuel efficiency
+    }
+
+    public double getAverageFuelEfficiencyOfSUVs(double distance, double fuelPrice) {
+		return fuelPrice;
+        // Implement calculating and returning the average fuel efficiency of SUVs
     }
 }
