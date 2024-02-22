@@ -13,6 +13,8 @@ import java.util.*;
 
 
 public class VehicleManager {
+	private final static double distance = 300;
+	private final static double fuelPrice = 3.25;
     private ArrayList<Vehicle> vehicleList;
 	private final static String vehicleFilePath = "Files/vehicleList.csv";
 	
@@ -79,7 +81,8 @@ public class VehicleManager {
     	for (Vehicle vehicle : vehicleList) {
             if (vehicle instanceof Car) {
             	carList.add(vehicle);
-            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
+            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(distance, fuelPrice));
+            	//System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
             }
         }
     }
@@ -90,7 +93,8 @@ public class VehicleManager {
     	for (Vehicle vehicle : vehicleList) {
             if (vehicle instanceof Truck) {
             	truckList.add(vehicle);
-            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
+            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(distance, fuelPrice));
+            	//System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
             }
         }
     }
@@ -101,7 +105,8 @@ public class VehicleManager {
     	for (Vehicle vehicle : vehicleList) {
             if (vehicle instanceof SUV) {
             	suvList.add(vehicle);
-            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
+            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(distance, fuelPrice));
+            	//System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
             }
         }
     }
@@ -112,14 +117,16 @@ public class VehicleManager {
     	for (Vehicle vehicle : vehicleList) {
             if (vehicle instanceof MotorBike) {
             	motorbikeList.add(vehicle);
-            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
+            	System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(distance, fuelPrice));
+            	//System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
             }
         }
     }
 
     public void displayVehicleInformation(Vehicle v) {
         if(vehicleList.contains(v)){
-			System.out.println(v + " MaintenanceCost: " + v.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + v.calculateFuelEfficiency(5000, v.getFuelPrice(v.getFuelType())));
+        	System.out.println(v + " MaintenanceCost: " + v.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + v.calculateFuelEfficiency(distance, fuelPrice));
+			//System.out.println(v + " MaintenanceCost: " + v.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + v.calculateFuelEfficiency(5000, v.getFuelPrice(v.getFuelType())));
 		}else {
 			System.out.println("\n*** Vehicle Not Found: ***");
 		}
@@ -128,7 +135,8 @@ public class VehicleManager {
     public void displayAllVehicleInformation() {
         // Implement displaying the information of all vehicles
     	for (Vehicle vehicle : vehicleList) {
-    		System.out.println(vehicle + ", MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
+    		System.out.println(vehicle + " MaintenanceCost: " + vehicle.calculateMaintenaceCost(distance) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(distance, fuelPrice));
+    		//System.out.println(vehicle + ", MaintenanceCost: " + vehicle.calculateMaintenaceCost(5000) +  ", FuelEfficiency: " + vehicle.calculateFuelEfficiency(5000, vehicle.getFuelPrice(vehicle.getFuelType())));
     	}
     }
 
