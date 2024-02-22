@@ -120,6 +120,13 @@ public abstract class Vehicle {
 		this.startType = startType;
 	}
 
+
+	public abstract String getVehicle();
+	public abstract double calculateMaintenaceCost(double distance); 
+	public abstract double calculateFuelEfficiency(double distance, double fuelPrice); 
+	public abstract void startEngine();
+	
+	
 	@Override
 	public String toString() {
 		return "Vehicle [brand=" + brand + ", make=" + make + ", modelYear=" + modelYear + ", price=" + price
